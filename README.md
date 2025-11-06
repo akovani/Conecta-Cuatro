@@ -206,11 +206,11 @@ npm run dev
 | Contributor | Contributions               |
 | ----------- | --------------------------- |
 | Alaxsan     | Mockup & Design             |
-| Arjanis     | Computer Vision & Backend   |
+| Arjanis (Me)| Computer Vision & Backend   |
 | Emre        | Camera Access               |
 | Shamoun     | Board Column to Coordinates |
 | Timo        | Frontend                    |
-| Pascal (Me) | Backend                     |
+| Pascal      | Backend                     |
 
 ---
 
