@@ -1,0 +1,7 @@
+**/venv
+**/.venv
+**/target
+**/__pycache__
+.DS_Store
+build
+.venv

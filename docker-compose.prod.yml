@@ -1,0 +1,25 @@
+services:
+  frontend:
+    image: registry.gitlab.com/gibz/teaching/m241-m245/2024/connectfour/conecta-cuatro/frontend:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - WEBSOCKET_URL=ws://localhost:8000
+    depends_on:
+      - api
+    networks:
+      - connect-four-network
+
+  api:
+    image: registry.gitlab.com/gibz/teaching/m241-m245/2024/connectfour/conecta-cuatro/api:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - WEBSOCKET_HOST=0.0.0.0
+      - WEBSOCKET_PORT=8000
+    networks:
+      - connect-four-network
+
+networks:
+  connect-four-network:
+    driver: bridge

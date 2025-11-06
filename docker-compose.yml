@@ -1,0 +1,25 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - WEBSOCKET_URL=ws://api:8000
+    depends_on:
+      - api
+    networks:
+      - connect-four-network
+
+  api:
+    build: ./connect-four-api
+    ports:
+      - "8000:8000"
+    environment:
+      - WEBSOCKET_HOST=0.0.0.0
+      - WEBSOCKET_PORT=8000
+    networks:
+      - connect-four-network
+
+networks:
+  connect-four-network:
+    driver: bridge
